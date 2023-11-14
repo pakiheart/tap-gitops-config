@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       annotations:
-        apps.tanzu.vmware.com/correlationid: ssh://git@github.com/pakiheart/tanzu-java-web-app?sub_path=/
+        apps.tanzu.vmware.com/correlationid: ssh://git@github.com:vmware-tanzu/application-accelerator-samples.git?sub_path=tanzu-java-web-app
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/version: 2.7.3
         conventions.carto.run/applied-conventions: |-
