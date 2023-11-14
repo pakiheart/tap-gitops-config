@@ -16,9 +16,9 @@ spec:
   template:
     metadata:
       annotations:
-        apps.tanzu.vmware.com/correlationid: ssh://git@github.com/vmware-tanzu/application-accelerator-samples?sub_path=tanzu-java-web-app
+        apps.tanzu.vmware.com/correlationid: ssh://git@github.com/pakiheart/tanzu-java-web-app?sub_path=/
         autoscaling.knative.dev/minScale: "1"
-        boot.spring.io/version: 2.7.17
+        boot.spring.io/version: 2.7.3
         conventions.carto.run/applied-conventions: |-
           appliveview-sample/app-live-view-appflavour-check
           spring-boot-convention/auto-configure-actuators-check
@@ -49,7 +49,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.health.probes.enabled="true" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: registry.harbor.learn.tapsme.org/tap-build/workloads/tanzu-java-web-app-dev@sha256:29da14394041048d5970ba8e776c47580fc54155f7dc7c5d6ce2d8d97a12f19c
+        image: registry.harbor.learn.tapsme.org/tap-build/workloads/tanzu-java-web-app-dev@sha256:57b7ee60546eca4d26bc8965687e5e9ed97dad407e27fde1e9660897d8e576f7
         livenessProbe:
           httpGet:
             path: /livez
